@@ -212,24 +212,24 @@
 #region Локальные функции
 
 
-public class Program
-{
+// public class Program
+// {
     
-    static void Main(string[] args)
-    {
-        int a = 45;
-        int b =12;
+//     static void Main(string[] args)
+//     {
+//         int a = 45;
+//         int b =12;
 
-        System.Console.WriteLine(Sum1());
+//         System.Console.WriteLine(Sum1());
 
-        int Sum1() => a + b;
+//         int Sum1() => a + b;
 
-        static int Sum2() => a - b;                    //static не доступны внешние параметры
-    }
+//         static int Sum2(int a, int b) => a - b;                    //static не доступны внешние параметры
+//     }
 
 
 
-}
+// }
 
 
 
@@ -241,4 +241,147 @@ public class Program
 
 
 
+
+#region  Enums
+
+// Status status = Status.Running;
+
+// if(status == Status.Stopped)
+// {
+//     System.Console.WriteLine("Stopped");
+// }
+
+
+// enum Status : byte
+// {
+//     Running = 0,
+//     Stopped = 1,
+//     Panding = 2,
+//     Started = 0,
+//     Wait = Panding,
+// }
+
+
+
+
+
+#endregion
+
+
+
+#region Switch
+
+// Status status = Status.Running;
+
+// switch(status)
+// {
+//     case Status.Panding:
+//     case Status.Running:
+//     {
+//         System.Console.WriteLine("Running or Panding");
+        
+//         goto case Status.Stopped;
+//     }
+
+//     case Status.Stopped:
+//     {
+//         System.Console.WriteLine("Stopped");
+//         break;
+//     }
+
+//     default:
+//     {
+//         System.Console.WriteLine("Unknown");
+//         break;
+//     }
+
+
+// }
+
+
+
+// enum Status : byte
+// {
+//     Running = 0,
+//     Stopped = 1,
+//     Panding = 2,
+//     Started = 0,
+//     Wait = Panding,
+// }
+
+
+
+// int Execut(Operation op, int a, int b)
+// {
+//     switch(op)
+//     {
+//         case Operation.Sum:
+//             return a + b;
+//         case Operation.Sub:
+//             return a - b;
+//         case Operation.Mul:
+//             return a * b;
+//         case Operation.Div:
+//             return a / b;
+//         default:
+//             return -1;
+
+//     }
+
+
+// }
+
+
+
+// int Execut(Operation op, int a, int b)
+// {
+//     int result = op switch
+//     {
+//         Operation.Sum => a+b,
+//         Operation.Sub => a-b,
+//         Operation.Mul => a*b,
+//         Operation.Div => a/b,
+//         _ => -1,
+//     }
+
+//     return result;
+// }
+
+
+
+
+// int Execut(Operation op, int a, int b)
+// {
+//     return op switch
+//     {
+//         Operation.Sum => a+b,
+//         Operation.Sub => a-b,
+//         Operation.Mul => a*b,
+//         Operation.Div => a/b,
+//         _ => -1,
+//     };
+// }
+
+
+
+
+int Execut(Operation op, int a, int b) => op switch
+{
+    Operation.Sum => a+b,
+    Operation.Sub => a-b,
+    Operation.Mul => a*b,
+    Operation.Div => a/b,
+    _ => -1,
+};
+
+
+enum Operation
+{
+    Sum = 0,
+    Sub = 1,
+    Mul = 2,
+    Div = 3,
+}
+
+#endregion
 
