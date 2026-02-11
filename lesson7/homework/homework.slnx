@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RandomUtils/RandomUtils.csproj" />
+  <Project Path="WarehouseApp/WarehouseApp.csproj" />
+</Solution>
