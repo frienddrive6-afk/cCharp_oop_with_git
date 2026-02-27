@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="WarGame.ConsoleApp/WarGame.ConsoleApp.csproj" />
+  <Project Path="WarGame.Core.Models/WarGame.Core.Models.csproj" />
+</Solution>
