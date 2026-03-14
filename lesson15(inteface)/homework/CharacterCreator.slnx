@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CharacterCreator.App/CharacterCreator.App.csproj" />
+  <Project Path="CharacterCreator.Core/CharacterCreator.Core.csproj" />
+</Solution>
