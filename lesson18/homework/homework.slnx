@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Termamenr.Run/Termometr.Run.csproj" />
+  <Project Path="Termometr.Core/Termometr.Core.csproj" />
+</Solution>
